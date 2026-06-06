@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enciclopédia de Heróis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-theme="dark">
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <span>Enciclopédia de Heróis</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+                <li><a href="comparar.html">Comparar</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="timeline.html">Linha do Tempo</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="favoritos.html" class="favorites-btn">
+                    <i class="fas fa-heart"></i>
+                    <span class="favorites-count" id="favoritesCount">0</span>
+                </a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="banner-carrosel">
+            <div class="carrosel">
+                <div class="slides" id="slides">
+                    <img src="assets/img/img-1.jpg" alt="Heróis DC">
+                    <img src="assets/img/img-2.jpg" alt="Heróis Marvel">
+                    <img src="assets/img/img-3.jpg" alt="Anime">
+                    <img src="assets/img/img-4.jpg" alt="Games">
+                    <img src="assets/img/img-5.jpg" alt="Filmes">
+                </div>
+                <div class="botoes-carrossel">
+                    <button class="btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <section class="hero-search-section">
+        <div class="search-container glass-card">
+            <div class="search-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Pesquise por nome, universo, poder, criador ou alinhamento...">
+            </div>
+            <div class="search-suggestions" id="searchSuggestions" style="display: none;"></div>
+            <div class="filters-wrapper" id="filtersWrapper">
+                <select class="filter-select" id="universeFilter">
+                    <option value="">Todos os Universos</option>
+                    <option value="Marvel Comics">Marvel Comics</option>
+                    <option value="DC Comics">DC Comics</option>
+                    <option value="Anime">Anime</option>
+                    <option value="Games">Games</option>
+                    <option value="Filmes">Filmes</option>
+                </select>
+                <select class="filter-select" id="alignmentFilter">
+                    <option value="">Todos os Alinhamentos</option>
+                    <option value="Herói">Herói</option>
+                    <option value="Vilão">Vilão</option>
+                    <option value="Anti-herói">Anti-herói</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+        <section class="section">
+            <h2 class="section-title">Herói do Dia</h2>
+            <div class="two-columns">
+                <div class="glass-card" id="heroOfTheDay">
+                </div>
+                <div class="glass-card" id="funFact">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Destaques da Semana</h2>
+            <div class="heroes-grid" id="featuredHeroes">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Estatísticas</h2>
+            <div class="stats-grid" id="statsGrid">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Todos os Personagens</h2>
+            <div class="heroes-grid" id="allHeroes">
+            </div>
+        </section>
+    </main>
+
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3></i> Enciclopédia de Heróis</h3>
+                <p style="margin-top: 1rem; color: var(--text-muted);">Sua fonte definitiva para informações sobre heróis, vilões e anti-heróis de todos os universos!</p>
+            </div>
+            <div>
+                <h4>Links Rápidos</h4>
+                <ul style="list-style: none; margin-top: 1rem; display: grid; gap: 0.5rem;">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="ranking.html">Ranking</a></li>
+                    <li><a href="comparar.html">Comparar</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <ul style="list-style: none; margin-top: 1rem; display: grid; gap: 0.5rem;">
+                    <li><i class="fas fa-envelope"></i> contato@herois.com</li>
+                    <li><i class="fab fa-twitter"></i> @heroisenciclopedia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Enciclopédia de Heróis. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

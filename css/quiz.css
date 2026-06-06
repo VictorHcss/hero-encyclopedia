@@ -1,0 +1,120 @@
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quiz-start,
+.quiz-results {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.quiz-start h1,
+.quiz-results h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.start-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.25rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: var(--transition);
+}
+
+.start-btn:hover {
+    transform: scale(1.05);
+}
+
+.quiz-question {
+    padding: 2rem;
+}
+
+.question-number {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.question-text {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.options-list {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+.option-btn {
+    width: 100%;
+    text-align: left;
+    padding: 1.25rem 1.5rem;
+    background: var(--surface);
+    border: 2px solid var(--surface-2);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.option-btn:hover {
+    border-color: var(--primary-color);
+}
+
+.option-btn.correct {
+    border-color: #4caf50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.option-btn.incorrect {
+    border-color: #f44336;
+    background: rgba(244, 67, 54, 0.1);
+}
+
+.quiz-progress {
+    margin-top: 2rem;
+    height: 8px;
+    background: var(--surface-2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.result-card {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+}
+
+.result-number {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.result-number.correct { color: #4caf50; }
+.result-number.incorrect { color: #f44336; }
+.result-number.score { color: var(--accent-color); }
+
+.result-label {
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
